@@ -1,56 +1,83 @@
-*{
+* {
     box-sizing: border-box;
-    font-family: sans-serif;
 }
-body{
+
+body {
     margin: 0;
     padding: 0;
 }
 
-.container{
+.container {
     max-width: 960px;
+    margin: auto;
 }
 
-.row::after{
+.row::after {
     content: "";
     clear: both;
     display: block;
 }
 
-[class*="col-"]{
+[class*="col-"] {
     float: left;
     padding: 15px;
     width: 100%;
 }
+
 @media only screen and (min-width: 768px) {
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
-    
+    .col-1 {
+        width: 8.33%;
+    }
+    .col-2 {
+        width: 16.66%;
+    }
+    .col-3 {
+        width: 25%;
+    }
+    .col-4 {
+        width: 33.33%;
+    }
+    .col-5 {
+        width: 41.66%;
+    }
+    .col-6 {
+        width: 50%;
+    }
+    .col-7 {
+        width: 58.33%;
+    }
+    .col-8 {
+        width: 66.66%;
+    }
+    .col-9 {
+        width: 75%;
+    }
+    .col-10 {
+        width: 83.33%;
+    }
+    .col-11 {
+        width: 91.66%;
+    }
+    .col-12 {
+        width: 100%;
+    }
 }
+
 nav {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color:white;
+    background-color: white;
     position: fixed;
     top: 0;
-    left:0; 
+    left: 0;
     right: 0;
-    box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.2), 0px 6px 20px 0 rgba(0,0,0,0.19);
-    z-index: 5; 
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0px 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 5;
+    font-family: sans-serif;
 }
 
-nav a{
+nav a {
     float: left;
     color: black;
     display: block;
@@ -58,14 +85,158 @@ nav a{
     text-decoration: none;
     text-align: center;
     transition-duration: 0.4s;
-    border-bottom: 5px solid white; 
+    border-bottom: 5px solid white;
 }
-nav a:hover{
+
+nav .overview:hover {
     border-color: #f1d117;
 }
-nav .logo{
+
+nav .specifics:hover {
+    border-color: #1C455E;
+}
+
+nav .bookings:hover {
+    border-color: #F59B18;
+}
+
+nav .logo {
     height: 50px;
     overflow: hidden;
     padding: 4px 6px;
     float: left;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+.parallax1,
+.parallax2 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.7;
+    padding: 200
+}
+
+.parallax1 {
+    background-image: url('http://d2td6mzj4f4e1e.cloudfront.net/wp-content/uploads/sites/7/2013/07/Wellington-College-Grounds.jpg');
+    height: 100%;
+}
+
+.parallax2 {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/81/Wellington_College%2C_Chapel.jpg');
+    height: 50%;
+}
+
+.float_box {
+    position: absolute;
+    left: 25%;
+    top: 50%;
+    width: 50%;
+    text-align: center;
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 35px;
+    letter-spacing: 75px;
+}
+
+@media only screen and (max-width: 768px) {
+    .float_box {
+        width: 100%;
+        left: 0;
+        right: 0;
+        font-size: 21px;
+        letter-spacing: 45px;
+    }
+}
+
+.box {
+    background-color: #1C455E;
+    font-size: 36px;
+    box-shadow: 0px 10px 10px #111;
+    color: whitesmoke;
+    text-align: center;
+    padding: 5%;
+    font-family: 'Courier New'
+}
+
+
+.twitter-feed{
+    line-height: 0;
+    -webkit-column-count: 1;
+    -webkit-column-gap: 1em;
+    -moz-column-count: 1;
+    -moz-column-gap: 1em;
+    column-count: 1;
+    column-gap: 1em;
+}
+.twitter-box{
+    overflow: hidden;
+    max-height: 480px;
+    width: 100%;
+        opacity: 0.4;
+}
+.read-more{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    z-index: 1;
+}
+.read-more a{
+    text-decoration: none;
+    background-color: #F59B18;
+    padding: 30px;
+}
+.tweet {
+    border: 3px solid #ccf;
+    border-radius: 5px;
+    display: inline-block;
+    background-color: transparent;
+    color: whitesmoke;
+    font-size: 24px;
+    overflow: hidden;
+    margin: 0 0 1em;
+    width: 100% !important;
+    height: auto !important;
+}
+@media only screen and (min-width: 768px){
+    .twitter-feed{
+        line-height: 0;
+        -webkit-column-count: 3;
+        -webkit-column-gap: 1em;
+        -moz-column-count: 3;
+        -moz-column-gap: 1em;
+        column-count: 3;
+        column-gap: 1em;
+        height: 100%;
+    }
+}
+
+.tweet>p {
+    line-height: 1em;
+    text-overflow: ellipsis;
+}
+
+.tweet>p a {
+    text-decoration: none;
+    color: #55aaFF;
+}
+
+.tweet .Emoji {
+    width: 1rem;
+    height: 1rem;
+}
+
+.tweet>img {
+    width: 100%;
+    height: auto;
+}
+
+.tweet .u-hidden {
+    display: none;
 }

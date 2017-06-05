@@ -1,0 +1,38 @@
+#form input {
+	background-color:inherit;
+	border:none;
+	border-bottom:3px solid black;
+	display:block;
+	margin-top:10%;
+	font-size: inherit;
+	width: 20%;
+	transition-duration: 1s;
+}
+#form select {
+	border:none;
+	border-bottom:3px solid black;
+	background-color: white;
+	font-size: inherit;
+	width: 20%;
+	margin-top: 10%;
+}
+
+#form input:focus{
+	width: 100%;
+}
+
+#form {
+	display:block;
+	margin-left:20%;
+	margin-right:20%;
+	border-top:solid 1px black;
+	border-bottom:solid 1px black;
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+
+#heading {
+	font-size: 40px;
+	font-weight: bold;
+}
+
