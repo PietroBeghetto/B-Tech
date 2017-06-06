@@ -7,6 +7,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/twitterfeed.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script>
+        var edFestDate = new Date("Jun 22, 2017 12:00:00").getTime(); 
+        var timer = setInterval(function() { var current = new Date().getTime();
+        var distance = edFestDate - current; var days = Math.round(distance / (1000 * 60 * 60 * 24)); 
+        var hours = Math.round((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); 
+        var minutes = Math.round((distance % (1000 * 60 * 60)) / (1000 * 60)); 
+        var seconds = Math.round((distance % (1000 * 60)) / 1000); 
+        document.getElementById("timer").innerHTML = days + " Days " + hours + " Hours " + minutes + " Minutes " + seconds + " Seconds"; }, 1000);
+</script>
 </head>
 
 <body>
@@ -21,10 +30,8 @@
     <div class="parallax1"></div>
 
     <div class="box">
-        Over two days The Telegraph Festival of Education brings together the very best of education's' most forward thinking advocates,
-        practitioners of change, policy makers and educators in one of the leading forums for thought leadership, CPD and
-        debate.
-
+        <h5 id="timer"></h5>
+        <p>Until The Festival of Education</p>
     </div>
 
 
