@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/form.css">
 	<link rel="stylesheet" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+	$("#submit").click(function(){
+		$.ajax({
+			url: "scripts/sendemail.php",
+			method: "post",
+			data: {firstname: $("input[name=firstname]").val(), surname: $("input[name=surname]").val(), email: $("input[name=email]").val(), date: $("select").val()},
+			success: function(callback){
+				console.log(callback);
+			}
+		});
+	});
+	</script>
 </head>
 <body>
 	<nav>
@@ -26,6 +39,7 @@
 				<option value="sunday">Sunday</option>
 				<option value="nonselect" disabled>Monday</option>
 			</select>
+			<button class="button" id="submit">Submit</button>
 		</form>
 	</div>
 </body>
